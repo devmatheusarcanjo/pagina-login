@@ -1,0 +1,124 @@
+
+:root {
+  --cordefundobody: #16171A;
+  --cortexto: #eee;
+  --cordabordainput: #aaa;
+  --corfundobotao: #c09829;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  background-color: var(--cordefundobody);
+  font-family: montserrat, "sans-serif";
+  color: var(--cortexto);
+  max-height: 100vh;
+}
+
+main {
+  height: 100vh;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 60px 0; */
+}
+
+[title] {
+  margin: 20px
+}
+
+label {
+  display: block;
+}
+
+input {
+  outline: none;
+  border: solid 1px var(--cordabordainput);
+  padding: 20px;
+  font-size: 1rem;
+  background-color: var(--cordefundobody);
+  margin: 10px 0;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+}
+
+input:invalid {
+  border: solid 1px red;
+}
+
+
+input:invalid + [aviso-email],input:invalid + [aviso-senha] {
+  display: block;
+}
+
+input:valid{
+  border: solid 1px #555;
+}
+
+input:focus:not(input:invalid){
+  border: solid 1px green;
+}
+
+[aviso-email], [aviso-senha] {
+  color: red;
+  display: none;
+  margin: 15px 0 20px;
+  font-size: 0.9rem;
+}
+
+form {
+  width: 60%;
+  padding: 10px;
+}
+
+[buttons] {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  align-items: center;
+  margin: 15px 0;
+} 
+
+[buttons] * {
+  flex: 1
+} 
+
+[buttons] button {
+  padding: 15px;
+  background-color: var(--corfundobotao);
+  font-weight: 600;
+  border-radius: 5px;
+  color: white;
+  font-size: .9em;
+  cursor: pointer;
+  transition: all .5s;
+  border: none;
+}
+
+[buttons] button:hover {
+  transform: scale(1.1);
+}
+
+[buttons] a {
+  color: #F0C837;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  
+  form {
+    width: 90%; 
+  }
+
+
+}
+
